@@ -1,0 +1,40 @@
+.chat-block {
+
+
+  align-items: center;
+  padding: 3px;
+
+  .avatar {
+    max-height: 54px;
+    max-width: 54px;
+    border-radius: 50%
+  }
+
+  .chat-title {
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+
+  .chat-block-childs {
+    max-width: calc(100% - 54px);
+  }
+
+  .chat-block-child {
+    margin-left: 3px;
+  }
+
+  .unreadMessageCount {
+    background-color: #adadad;
+    border-radius: 7px;
+    min-width: max-content;
+    padding: 0 4px 0 4px;
+    text-align: center
+  }
+
+  &:hover {
+    background-color: red;
+  }
+}
+
+
+

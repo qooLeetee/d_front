@@ -1,0 +1,17 @@
+<div class="chat-block flex-row">
+  <img class="avatar" src="/assets/dzPoekhwbUM.jpg" alt="">
+  <div class="flex-column chat-block-childs">
+    <div class="chat-block-child flex-space-between">
+      <div class="chat-title overflow-hidden-ellipsis">{{ chatData.title }}</div>
+      <div>{{ chatData.message.dateTime }}</div>
+    </div>
+    <div class="chat-block-child flex-space-between">
+      <div class="overflow-hidden-ellipsis">
+        {{ chatData.message.datas.value }}
+      </div>
+      <div class="unreadMessageCount">
+        {{ chatData.unreadMessageCount }}
+      </div>
+    </div>
+  </div>
+</div>
