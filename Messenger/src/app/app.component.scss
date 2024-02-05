@@ -13,10 +13,10 @@ html {
 .chat-list {
   width: 30%;
   background-color: #7474d9;
+  resize: horizontal;
 }
 
-//#2085c7
-.message-block {
+.message-list {
   width: 70%;
   background-color: cadetblue;
 }
@@ -27,9 +27,17 @@ html {
   flex-direction: column;
 }
 
-.flex-row {
+.flex {
   display: flex;
-  flex-direction: row;
+
+  &-row {
+    display: flex;
+    flex-direction: row;
+
+    &-block {
+      width: max-content;
+    }
+  }
 }
 
 .flex-space-between {
@@ -41,4 +49,15 @@ html {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.scroll-block {
+  overflow: hidden;
+  max-height: 100%;
+  overflow-y: scroll;
+  scrollbar-width: none
+}
+
+.margin5 {
+  margin: 0 5px 0 5px
 }
