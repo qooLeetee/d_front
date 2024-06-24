@@ -1,0 +1,42 @@
+.avatar {
+  max-height: 50px;
+  max-width: 50px;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.timeSend {
+  font-size: 0.9rem;
+  text-align: end;
+}
+
+.message-block {
+  border-radius: 5px;
+  min-width: 50px;
+  margin: 5px
+}
+
+.content-block {
+  min-width: 70px;
+  max-width: 500px;
+  margin-left: 5px;
+
+  .nickname-title {
+    border-radius: 10px 10px 0 0;
+    width: 100%;
+  }
+}
+
+.other-user {
+  background-color: gray;
+  border-radius: 10px 10px 10px 0;
+}
+
+.auth-user {
+  background-color: cornflowerblue;
+  border-radius: 10px 10px 0 10px;
+}
+
+img, video {
+  max-height: 200px;
+}

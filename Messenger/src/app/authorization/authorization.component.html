@@ -1,0 +1,24 @@
+<div class="authWindow flex-column" style="align-self: center">
+  <div class="authBlock">
+    <div class="flex-row" style="justify-content: flex-end">
+      <label>Логин</label>
+      <input
+        type="text"
+        [(ngModel)]="this.login"
+        required
+      />
+    </div>
+    <div class="split"></div>
+    <div class="flex-row">
+      <label>Пароль</label>
+      <input
+        type="password"
+        [(ngModel)]="this.password"
+        required
+      />
+    </div>
+    <div class="flex-center button">
+      <button (click)="auth()">Войти</button>
+    </div>
+  </div>
+</div>

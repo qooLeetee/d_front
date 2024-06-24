@@ -1,0 +1,11 @@
+<div class="send-message-block">
+  <div class="flex-row-alCenter">
+    <input #myInput type="file" class="file-upload" (change)="changeFileList($event)" multiple>
+    <textarea
+      id="sendMessageContent"
+      placeholder="Введите сообщение"
+      style="resize: none; width: 300px;"
+      [(ngModel)]="messageText"></textarea>
+    <button (click)="this.sendMessage()">Отправить</button>
+  </div>
+</div>
