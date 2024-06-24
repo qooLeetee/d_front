@@ -1,0 +1,18 @@
+<div class="flex-column-end">
+  <div class="chatHeader" *ngIf="chatId">
+    <chat-header [chatId]="chatId"></chat-header>
+  </div>
+  <div id="scroll-block" class="scroll-block">
+    <div *ngFor="let message of messageList; let i = index">
+      <div class="diffUserMessageSplitter"
+           *ngIf="i && messageList[i-1] && message.publisher.id != messageList?.[i-1]!.publisher.id"></div>
+      <message-block [data]="message"
+                     [needImage]='((messageList[i+1] && message.publisher.id != messageList?.[i+1]!.publisher.id) || i == messageList.length-1)'
+                     [needTitle]='!(messageList[i-1] && message.publisher.id == messageList?.[i-1]!.publisher.id)'
+      ></message-block>
+    </div>
+  </div>
+  <div class="send-message-block" *ngIf="chatId">
+    <send-message-block [chatId]="chatId"></send-message-block>
+  </div>
+</div>

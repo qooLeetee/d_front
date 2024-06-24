@@ -1,0 +1,10 @@
+<div class="flex-column chat-list-list">
+  <div class="scroll-block chat-list-block" *ngFor="let chat of chatList">
+    <div>
+      <chat-block
+        [chatData]="chat"
+      ></chat-block>
+    </div>
+  </div>
+</div>
+

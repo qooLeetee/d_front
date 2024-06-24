@@ -10,25 +10,13 @@ html {
   flex-direction: row;
 }
 
-.chat-list {
-  width: 30%;
-  background-color: #7474d9;
-  resize: horizontal;
-}
-
-.message-list {
-  width: 70%;
-  background-color: cadetblue;
-}
-
-.flex-column {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-}
-
 .flex {
   display: flex;
+
+  &-center {
+    display: flex;
+    justify-content: center;
+  }
 
   &-row {
     display: flex;
@@ -36,6 +24,25 @@ html {
 
     &-block {
       width: max-content;
+    }
+
+    &-alCenter {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+
+  &-column {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    &-end {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: end;
     }
   }
 }
@@ -52,9 +59,8 @@ html {
 }
 
 .scroll-block {
-  overflow: hidden;
-  max-height: 100%;
-  overflow-y: scroll;
+  overflow: scroll;
+  height: 100%;
   scrollbar-width: none
 }
 

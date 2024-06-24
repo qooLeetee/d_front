@@ -1,0 +1,19 @@
+<a class="chat-block flex-row" [routerLink]="['/home/chat', chatData.id]">
+  <img class="avatar"
+       src="{{this.avatarUrl || '/assets/avatar.png'}}"
+       alt="">
+  <div class="flex-column chat-block-child-container">
+    <div class="chat-block-child flex-space-between">
+      <div class="chat-title overflow-hidden-ellipsis">{{ chatData.title || chatTitle }}</div>
+      <div>{{ chatData.message.dateTime | date: 'hh:mm' }}</div>
+    </div>
+    <div class="chat-block-child flex-space-between">
+      <div class="overflow-hidden-ellipsis">
+        {{ chatData.message.datas[0].value }}
+      </div>
+      <div class="unreadMessageCount" *ngIf="chatData.unreadMessageCount">
+        {{ chatData.unreadMessageCount }}
+      </div>
+    </div>
+  </div>
+</a>
