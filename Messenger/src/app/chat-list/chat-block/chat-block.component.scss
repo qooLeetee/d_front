@@ -1,6 +1,4 @@
 .chat-block {
-
-
   align-items: center;
   padding: 3px;
 
@@ -15,7 +13,7 @@
     font-size: 1.2rem;
   }
 
-  .chat-block-childs {
+  .chat-block-child-container {
     max-width: calc(100% - 54px);
   }
 
@@ -32,6 +30,7 @@
   }
 
   &:hover {
-    background-color: #ffffff;
+    background-color: #4f4faf;
+    border-radius: 5px;
   }
 }

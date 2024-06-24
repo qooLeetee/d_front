@@ -1,0 +1,72 @@
+<div class="flex message-block" [ngStyle]="data.publisher === 'Олег' ? {'justify-content':'end'} : {}">
+  <div class="flex-row" style="align-items: flex-end">
+    <!--    TODO: добавить условие скрытия аватарки на p2p чат-->
+    <img *ngIf="data.publisher!== 'Олег'" class="avatar" src="/assets/dzPoekhwbUM.jpg" alt="">
+    <div class="flex-column content-block"
+         [ngClass]="{'auth-user': data.publisher ==='Олег', 'other-user': data.publisher !=='Олег'}">
+      <div
+        class="flex nickname-title"
+        [ngStyle]="{'background-color' : data.publisher === 'Олег' ?  '#5b7bb6' : '#5b5b5b'}">
+        <div class="margin5"><span>{{ data.publisher }}</span></div>
+      </div>
+
+      <div class="margin5"><!--контент-->
+        <!--        TODO: добавить стили блокам контента-->
+        <!--    VIDEO-->
+        <ng-container *ngIf="checkToContainType(data, MessageTypeEnum.VIDEO)">
+          <div *ngFor="let element of filterDataByMessageType(data, MessageTypeEnum.VIDEO)">
+            <video controls>
+              <source src=" {{ element.value }}">
+            </video>
+          </div>
+        </ng-container>
+
+        <!--    IMAGE-->
+        <ng-container *ngIf="checkToContainType(data, MessageTypeEnum.IMAGE)">
+          <div *ngFor="let element of filterDataByMessageType(data, MessageTypeEnum.IMAGE)">
+            <div>
+              <img src="{{ element.value }}" alt="">
+            </div>
+          </div>
+        </ng-container>
+
+        <!--    FILE-->
+        <ng-container *ngIf="checkToContainType(data, MessageTypeEnum.FILE)">
+          <div *ngFor="let element of filterDataByMessageType(data, MessageTypeEnum.FILE)">
+            <div class="flex-row-block">
+              <!--              TODO: сделать блок файлов-->
+            </div>
+          </div>
+        </ng-container>
+
+        <!--    AUDIO-->
+        <ng-container *ngIf="checkToContainType(data, MessageTypeEnum.AUDIO)">
+          <div *ngFor="let element of filterDataByMessageType(data, MessageTypeEnum.AUDIO)">
+            <audio controls>
+              <source src="{{element.value}}">
+            </audio>
+          </div>
+        </ng-container>
+
+        <!--    TEXT-->
+        <ng-container *ngIf="checkToContainType(data, MessageTypeEnum.TEXT)">
+          <div *ngFor="let element of filterDataByMessageType(data, MessageTypeEnum.TEXT)">
+            <div>
+              {{ element.value }}
+            </div>
+          </div>
+        </ng-container>
+
+      </div>
+      <div class="flex-space-between margin5">
+        <div>
+          <!--              TODO: добавить статусы-->
+        </div>
+        <div class="timeSend">
+          {{ data.dateTime }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

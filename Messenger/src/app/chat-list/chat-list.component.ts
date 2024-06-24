@@ -17,16 +17,16 @@ export class ChatListComponent {
     message: {
       id: 10,
       publisher: 'Олег',
-      datas: {
+      datas: [{
         id: 1,
         messageType: MessageTypeEnum.TEXT,
         value: 'ы'
-      },
+      }],
       relatesTo: null,
       dateTime: '29.07.01',
       checked: false
     },
-    unreadMessageCount: 30,
+    unreadMessageCount: 0,
     muted: null
   },
     {
@@ -38,11 +38,11 @@ export class ChatListComponent {
       message: {
         id: 10,
         publisher: 'Олег',
-        datas: {
+        datas: [{
           id: 1,
           messageType: MessageTypeEnum.TEXT,
           value: 'хаваю?'
-        },
+        }],
         relatesTo: null,
         dateTime: '29.07.01',
         checked: false
